@@ -1,0 +1,4 @@
+#!/bin/bash
+tar cpf /home/kali/archive/"home-backup created on `date '+%d-%B-%Y'`.tar" /home/ 
+tar cpf /home/kali/archive/"home-backup created on `date '+%d-%B-%Y'`.tar"/var/log/ 
+tar cpf /home/kali/archive/"home-backup created on `date '+%d-%B-%Y'`.tar"/etc/ssh/sshd_config /etc/vsftpd.conf /etc/xrdp/xrdp.ini

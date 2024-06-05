@@ -1,0 +1,23 @@
+#!/bin/bash
+#1
+if ! grep -q '^deb http://archive.debian.org/debian buster-backports main'  /etc/apt/sources.list;  
+then echo "backports" sudo sh -c 'echo "deb http://archive.debian.org/debian buster-backports" >> /etc/apt/sources.list'
+fi
+#2
+sudo apt update -y && sudo apt upgrade -y
+#3
+sudo apt install apache2 && sudo systemctl enable apache2 && sudo systemctl start apache2
+#4
+sudo apt install -y python3
+#5
+sudo apt install -y openssh-server && sudo systemctl restart ssh && sudo systemctl enable ssh
+#6
+sudo mkdir Homework
+#7
+sudo apt install -y net-tools
+#8
+sudo ifconfig | grep "inet"
+#9
+sudo ping -c 10 https://skillfactory
+#10
+sudo apt install mysql-server -y && sudo systemctl start mysql && sudo systemctl enable mysql
