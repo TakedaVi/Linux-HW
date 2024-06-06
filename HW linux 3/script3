@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo logwatch --detail high --mailto dmitryvelial@yandex.ru --range All --service vsftpd --service sshd --format html --output mail
